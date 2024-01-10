@@ -92,7 +92,7 @@ body{
 }
 
 .input::placeholder {
-  color: var(--text-color-secondary);
+  color: var(--text-color-secundary);
 }
 
 .button {
@@ -112,4 +112,60 @@ body{
     padding: 0%;
     margin: 0%;
   }
+}
+
+/*tabla */
+.app {
+  max-width: 800px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+  padding: 8px;
+  text-align: left;
+}
+.tabla-usuarios th {
+  color: var(--color-primary);
+  background-color: #f8f9fa;
+}
+
+.tabla-usuarios td {
+  color: var(--text-color-secundary)
+}
+
+.tabla-usuarios td button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.tabla-usuarios .editar {
+  background-color: var(--color-secundary);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+.tabla-usuarios .borrar {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+.tabla-usuarios .editar:hover,
+.tabla-usuarios .borrar:hover {
+  background-color:var(--color-primary);
+  border-color: #0056b3;
 }

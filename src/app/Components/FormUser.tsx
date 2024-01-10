@@ -9,7 +9,9 @@ export default function FormUser() {
     gender: "",
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
 
     setUser({
@@ -34,7 +36,7 @@ export default function FormUser() {
     }
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e?.preventDefault();
     if (validateForm()) return;
     // Aquí puedes realizar acciones con los datos del formulario
@@ -45,7 +47,7 @@ export default function FormUser() {
     <div className="main">
       <h3 className="title">Usuario</h3>
 
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit} >
         <div className="contentInput">
           <label className="label">Nombre</label>
           <input
