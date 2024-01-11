@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { UserInterface } from "@/interfaces/User.Interface";
+import { UserInterface } from "@/app/interfaces/User.Interface";
+import Loader from "./Components/Loader";
 
 export default function Home() {
   const [user, setUser] = useState<UserInterface>({

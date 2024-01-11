@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { UserInterface } from "@/interfaces/User.Interface";
+import { UserInterface } from "@/app/interfaces/User.Interface";
 
 interface Props {
   usuarios: UserInterface[];
@@ -28,7 +28,7 @@ const ListUsers: React.FC<Props> = ({
           <tr key={`${usuario.name}_${index}`}>
             <td>{usuario.name}</td>
             <td>{usuario.birthday}</td>
-            <td>{usuario.gender}</td>
+            <td>{usuario.gender.toUpperCase()}</td>
             <td>
               <button className="editar" onClick={() => editarUsuario(usuario)}>
                 Editar
@@ -50,7 +50,5 @@ const ListUsers: React.FC<Props> = ({
     </table>
   );
 };
-
-
 
 export default ListUsers;
